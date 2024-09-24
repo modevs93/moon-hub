@@ -24,3 +24,24 @@ local Main = MakeTab({Name = "Main"})
 
 local section = AddSection(Main, {"Teste"})
 
+local Slider = AddSlider(Main, {
+  Name = "Walkspeed",
+  MinValue = 10,
+  MaxValue = 100,
+  Default = 16,
+  Increase = 1,
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
+  end
+})
+
+local Slider = AddSlider(Main, {
+  Name = "jump power",
+  MinValue = 10,
+  MaxValue = 100,
+  Default = 50,
+  Increase = 1,
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower
+  end
+})
